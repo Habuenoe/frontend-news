@@ -1,0 +1,58 @@
+<div class="modal fade" id="modalNews" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">New News</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form ngNativeValidate [formGroup]="form" (ngSubmit)="addNews()">
+          <div class="form-group">
+            <input formControlName="title" name="title" class="form-control" type="text" placeholder="Title" required="" minlength="1">
+          </div>
+          <div class="form-group">
+            <input formControlName="description" name="description" class="form-control" type="text" required="" minlength="1"
+                   placeholder="Description">
+          </div>
+          <div class="form-group">
+            <input formControlName="createDate" name="createDate" class="form-control" type="hidden"
+                   placeholder="Create Date">
+          </div>
+          <div class="form-group">
+            <input formControlName="content" name="content" class="form-control" type="text" placeholder="Content" required="" minlength="5">
+          </div>
+          <div class="form-group">
+            <input formControlName="author" name="author" class="form-control" type="text" placeholder="Author" required="" minlength="5">
+          </div>
+
+          <div class="form-group">
+            <input formControlName="archiveDate" name="archiveDate" class="form-control" type="hidden"
+                   placeholder="Archive Date">
+          </div>
+
+          <div class="form-group">
+            <input formControlName="archived" name="archived" class="form-control" type="hidden"
+                   placeholder="Archived ">
+          </div>
+          <button type="button" class="btn btn-outline-danger mr-2" data-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-outline-primary">Save News</button>
+        </form>
+      </div>
+<!--      <div class="modal-footer">-->
+<!--        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>-->
+<!--        <button type="button" class="btn btn-primary" (click)="addNews()">Save News</button>-->
+<!--      </div>-->
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+

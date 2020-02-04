@@ -1,0 +1,30 @@
+
+img.logo {
+  width: 50%;
+}
+
+.finametrix-bg {
+  background-color: #131B45 !important;
+}
+
+.card-header-finametrix-h3 {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(19, 27, 69, 0.125);
+  color: #131B45;
+}
+.card-header-finametrix {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  /*background-color: rgba(19, 27, 69, 0.06);*/
+  background-color: #131B45;
+  border-bottom: 1px solid rgba(19, 27, 69, 0.125);
+  color: #ffff;
+}
+
+.margin-top-10 {
+  margin-top: 7%;
+}
+
+
+

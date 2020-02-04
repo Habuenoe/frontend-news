@@ -1,0 +1,39 @@
+<section class="margin-top-10">
+  <div class="card">
+    <div class="card-header-finametrix-h3" style="text-align: center">
+      <h3>{{title}}</h3>
+    </div>
+  </div>
+  <div class="row mt-2 mb-2" >
+    <div class="col">
+      <button class="btn btn-outline-dark float-right mb-3" data-toggle="modal" data-target="#modalNews">Add News</button>
+    </div>
+  </div>
+  <div  *ngFor="let noticia of news">
+    <div class="card text-center mt-2 mb-2" *ngIf="!noticia.archived">
+      <div class="card-header-finametrix">
+        <h3> {{noticia.title}} </h3>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title">{{noticia.description}}</h5>
+        <p class="card-text">{{noticia.content}}</p>
+        <button (click)="archiveNews(noticia)" type="button" class="btn btn-outline-dark">Archived</button>
+<!--        <button (click)="deleteNews(noticia)"  *ngIf="noticia.archived" type="button" class="btn btn-outline-danger ml-2">Delete</button>-->
+      </div>
+
+      <div class="container-fechas mt-2">
+        <h2 class="badge badge-warning m-2">
+          Create Date: {{noticia.createDate}}
+        </h2>
+        <h2 class="badge badge-dark  m-2" *ngIf="noticia.archiveDate  && noticia.archiveDate !== '0000/00/00'">
+          Archived Date: {{noticia.archiveDate}}
+        </h2>
+      </div>
+      <div class="card-footer bg-transparent text-info text-uppercase">
+        Author: {{noticia.author}}
+      </div>
+    </div>
+  </div>
+</section>
+<app-add-new    (finish)="onFinish($event)"></app-add-new>
+
